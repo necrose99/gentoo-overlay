@@ -1,0 +1,12 @@
+--- operator-0.3/operator.c	2006-02-08 
+00:34:17.000000000 +0000
++++ operator.c	2008-07-09 18:55:24.000000000 +0100
+@@ -275,7 +275,7 @@
+ 			zval *object = php_operator_zval_ptr(&(opline->op1), &free_obj, execute_data TSRMLS_CC);
+ 			zval *prop = php_operator_zval_ptr(&(opline->op2), &free_prop, execute_data TSRMLS_CC);
+
+-			if (!object || Z_TYPE_P(object) != IS_OBJECT) {
++			if (!object || Z_TYPE_P(object) != IS_OBJECT || !prop) {
+ 				/* Let orignal handler throw error */
+ 				return php_operator_original_opcode_handlers[PHP_OPERATOR_DECODE(opline)](ZEND_OPCODE_HANDLER_ARGS_PASSTHRU);
+ 			}

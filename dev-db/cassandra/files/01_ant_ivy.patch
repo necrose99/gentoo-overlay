@@ -1,0 +1,10 @@
+--- ivy.old.xml	2010-10-09 08:43:56.538529965 -0700
++++ ivy.xml	2010-10-09 08:43:23.219213384 -0700
+@@ -20,6 +20,7 @@
+   <info organisation="apache-cassandra" module="cassandra"/>
+ 
+   <dependencies>
++    <dependency org="org.apache.ant" name="ant" rev="1.7.1"/>
+     <!-- FIXME: paranamer can be dropped after we're depending on avro
+     (since it depends on them). -->
+     <dependency org="com.thoughtworks.paranamer"

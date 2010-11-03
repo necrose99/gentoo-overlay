@@ -1,0 +1,17 @@
+--- xen/tools/symbols2.c	2008-08-22 05:49:10.000000000 -0400
++++ xen/tools/symbols.c	2009-02-11 13:56:48.000000000 -0500
+@@ -76,12 +76,12 @@
+ 	char str[500];
+ 	char *sym, stype;
+ 	int rc;
+-
++	char * fgetsresult;
+ 	rc = fscanf(in, "%llx %c %499s\n", &s->addr, &stype, str);
+ 	if (rc != 3) {
+ 		if (rc != EOF) {
+ 			/* skip line */
+-			fgets(str, 500, in);
++			fgetsresult = fgets(str, 500, in);
+ 		}
+ 		return -1;
+ 	}

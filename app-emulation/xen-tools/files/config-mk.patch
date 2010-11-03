@@ -1,0 +1,8 @@
+--- Config.mk.old	2009-04-28 22:23:56.820448622 -0700
++++ Config.mk	2009-04-28 22:21:59.654943089 -0700
+@@ -101,4 +101,4 @@
+ CONFIG_MINITERM    ?= n
+ CONFIG_LOMOUNT     ?= n
+ 
+--include $(XEN_ROOT)/.config
++#-include $(XEN_ROOT)/.config

@@ -1,0 +1,11 @@
+--- tools/check/funcs.sh	2009-04-28 22:33:38.000000000 -0700
++++ tools/check/funcs.sh	2009-04-28 22:33:04.000000000 -0700
+@@ -60,7 +60,7 @@
+ 	unset tmpfile
+ 	trap 'rm -f "$tmpfile"; exit' 0 1 2 15
+ 	tmpfile=`mktemp` || return 1
+-	ld "$@" -o "$tmpfile" >/dev/null 2>&1
++	gcc -c "$@" -o "$tmpfile" >/dev/null  2>&1
+ 	return $?
+ 	)
+ }

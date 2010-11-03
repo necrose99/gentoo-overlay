@@ -1,0 +1,11 @@
+--- src/java/org/apache/cassandra/cli/Cli.g	2010-10-22 09:29:50.641814690 -0700
++++ src/java/org/apache/cassandra/cli/Cli.g.new	2010-10-22 09:30:17.171403173 -0700
+@@ -310,7 +310,7 @@
+ 
+ // syntactic Elements
+ Identifier
+-    : Letter ( Alnum | '_' | '-' )*
++    : Letter ( Alnum | '_' | '-' | '.' )*
+     ;
+ 
+ // literals
