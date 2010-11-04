@@ -1,0 +1,11 @@
+--- src/java/org/apache/cassandra/db/migration/Migration.java	2010-10-28 08:30:08.000000000 -0700
++++ src/java/org/apache/cassandra/db/migration/Migration.java.new	2010-11-04 02:00:37.401992426 -0700
+@@ -69,7 +69,7 @@
+ {
+     protected static final Logger logger = LoggerFactory.getLogger(Migration.class);
+     
+-    public static final String NAME_VALIDATOR_REGEX = "\\w+";
++    public static final String NAME_VALIDATOR_REGEX = "[A-Za-z_.-]+";
+     public static final String MIGRATIONS_CF = "Migrations";
+     public static final String SCHEMA_CF = "Schema";
+     public static final ByteBuffer MIGRATIONS_KEY = ByteBufferUtil.bytes("Migrations Key");

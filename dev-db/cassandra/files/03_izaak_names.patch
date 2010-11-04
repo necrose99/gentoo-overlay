@@ -1,0 +1,11 @@
+--- src/java/org/apache/cassandra/cli/Cli.g	2010-10-28 08:30:08.000000000 -0700
++++ src/java/org/apache/cassandra/cli/Cli.g.new	2010-11-04 01:59:08.618600287 -0700
+@@ -468,7 +468,7 @@
+    : Digit+ DOT Digit+;
+ 
+ Identifier
+-    : (Letter | Alnum) (Alnum | '_' | '-' )*
++    : (Letter | Alnum) (Alnum | '_' | '-' | '.' )*
+     ;
+ 
+ // literals
