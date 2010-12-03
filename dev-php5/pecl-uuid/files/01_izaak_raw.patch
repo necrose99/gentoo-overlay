@@ -1,0 +1,21 @@
+--- uuid.c	2008-04-01 08:59:22.000000000 -0700
++++ uuid.new.c	2010-11-15 12:02:55.833675210 -0800
+@@ -162,7 +162,6 @@
+ 
+ 	do {
+ 		uuid_t uuid;
+-		char uuid_str[37];
+ 
+ 		switch(uuid_type) {
+ 		  case UUID_TYPE_DCE_TIME:
+@@ -183,9 +182,8 @@
+ 			break;        
+ 		}
+ 
+-		uuid_unparse(uuid, uuid_str);
+ 
+-		RETURN_STRING(uuid_str, 1);
++		RETURN_STRINGL((char *)uuid, sizeof(uuid_t), 1);
+ 	} while (0);
+ }
+ /* }}} uuid_create */
