@@ -25,6 +25,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/01_izaak_raw.patch"
+	php-ext-source-r2_src_prepare
 }
 
 
