@@ -6,7 +6,7 @@ EAPI=2
 PHP_EXT_NAME="uuid"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
-PHP_EXT_PECL_PKG="UUID"
+PHP_EXT_PECL_PKG="uuid"
 
 inherit php-ext-pecl-r2 eutils
 
