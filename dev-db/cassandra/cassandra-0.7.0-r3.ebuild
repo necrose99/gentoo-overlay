@@ -58,7 +58,7 @@ src_install() {
 
 	# JAR libs
 	java-pkg_dojar lib/*.jar || die "dojar failed"
-	java-pkg_newjar build/apache-cassandra-0.7.0-beta2-SNAPSHOT.jar ${PN}.jar || die "newjar failed"
+	java-pkg_newjar build/apache-cassandra-0.7.0-beta3-SNAPSHOT.jar ${PN}.jar || die "newjar failed"
 
 	# Configs
 	insinto /etc/cassandra
