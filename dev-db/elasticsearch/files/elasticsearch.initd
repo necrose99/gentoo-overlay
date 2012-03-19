@@ -1,0 +1,31 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+export ES_CLASSPATH="/usr/share/elasticsearch/lib/*"
+PID="/var/run/elasticsearch.pid"
+EXE="/usr/bin/elasticsearch"
+OPTS="-p ${PID} \
+	-Des.path.conf=/etc/elasticsearch \
+	-Des.path.logs=/var/log/elasticsearch \
+	-Des.path.data=/var/lib/elasticsearch \
+	-Des.path.work=/tmp/es \
+	-Des.path.bin=/usr/share/elasticsearch"
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting elasticsearch"
+	start-stop-daemon --start --exec ${EXE} --pidfile ${PID} -- ${OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping elasticsearch"
+	start-stop-daemon --stop --exec ${EXE} --pidfile ${PID} -- ${OPTS}
+	eend $?
+}
+
