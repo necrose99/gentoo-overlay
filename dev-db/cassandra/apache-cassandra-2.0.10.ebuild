@@ -7,8 +7,8 @@ EAPI=2
 
 DESCRIPTION="A highly scalable second-generation distributed database"
 HOMEPAGE="http://cassandra.apache.org/"
-SRC_URI="mirror://apache/cassandra/2.0.7/apache-cassandra-2.0.7-src.tar.gz"
-S="${WORKDIR}/apache-cassandra-2.0.7-src.tar.gz"
+SRC_URI="mirror://apache/cassandra/2.0.10/apache-cassandra-2.0.10-bin.tar.gz"
+S="${WORKDIR}/apache-cassandra-2.0.10-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
